@@ -36,6 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.link1 {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-size: 20px;
+}
+.link1:hover {
+  
+  color: rgb(250, 242, 242);
+  
+}
 .logintheam {
   width: 1140px;
   height: 500px;
@@ -92,6 +102,7 @@
 .signup {
   background-color: rgb(21, 65, 116);
   color: white;
+  margin-left: 230px;
 }
 .signup:hover {
   background-color: rgb(95, 102, 102);
@@ -104,4 +115,18 @@
 .login:hover {
   background-color: rgb(95, 102, 102);
   color: #56cde2;
+}
+.usersignup {
+  height: 300px;
+  width: 350px;
+  background-color: #dbe0e9;
+  margin-top: 30px;
+  margin-left: 150px;
+  padding-left: 20px;
+  padding-top: 10px;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+.lbl {
+  margin-left: 10px;
 }

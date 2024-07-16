@@ -4,9 +4,13 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './pages/Header';
-import LeftSidebar from './pages/LeftSidebar';
-import RightSidebar from './pages/RightSidebar';
+import Header from './pages/Header.js';
+import LeftSidebar from './pages/LeftSidebar.js';
+
+import Home from './pages/Home.js';
+import About from './pages/About.js';
+import ContactUs from './pages/ContactUs.js';
+import Registration from './pages/Registration.js';
 
 
 
@@ -23,7 +27,13 @@ function App() {
             <LeftSidebar />
           </div>
           <div className='col-7'>
-            <RightSidebar />
+            <Routes>
+              <Route path='/home' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contactus' element={<ContactUs />} />
+              <Route path='/registration' element={<Registration />} />
+            </Routes>
+            
           </div>
         </div>
         <div className='footer'>
