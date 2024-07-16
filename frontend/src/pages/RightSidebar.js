@@ -15,8 +15,8 @@ const RightSidebar = () => {
                             <label className="py-3">Password  :</label>
                             <input type="password"></input>
                             <div className="loginbtn">
-                                <button className="mx-2 signup">SignUp</button>
-                                <button className="mx-2 login">Login</button>
+                                <button className="mx-1 signup">SignUp</button>
+                                <button className="mx-1 login">Login</button>
                             </div>
 
                         </div>
