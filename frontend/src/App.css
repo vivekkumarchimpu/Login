@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+.logintheam {
+  width: 1140px;
+  height: 500px;
+  background-color: #282c34;
+  background-image: url("../public/logintheam1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 3px solid rgb(34, 75, 54);
+  
+}
+.userlogo {
+  height: 350px;
+  background-color: #282c34;
+  background-image: url("../public/loginpic.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 3px solid rgb(34, 75, 54); 
+  border-radius: 10%;
+}
+.lsidebar {
+  width: 475px;
+  height: 350px;
+  background-color: rgb(21, 65, 116);
+  margin-top: 120px;
+  border: 3px solid rgb(15, 66, 59);
+  border-radius: 8px;
+}
+.rsidebar {
+  width: 645px;
+  height: 350px;
+  background-color: rgb(21, 65, 116);
+  margin-top: 120px;
+  border: 5px solid rgb(15, 66, 59);
+  border-radius: 8px;
+}
+.userinput {
+  height: 200px;
+  width: 300px;
+  background-color: #dbe0e9;
+  margin-top: 70px;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+.emailid{
+  margin-left: 7px;
+}
+.loginbtn {
+  display: flex;
+  margin: 10px 120px;
+  
+}
+.signup {
+  background-color: rgb(21, 65, 116);
+  color: white;
+}
+.login {
+  background-color: rgb(21, 65, 116);
+  color: white;
+}
