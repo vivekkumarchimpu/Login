@@ -8,12 +8,12 @@ import {User} from "../models/user.models.js"
 const signUpUser = asyncHandler(async(req, res) => {
 
     //get User Details From Frontend
-    const { username, phoneno, email, password, pimage } = req.body
+    const { username, phone, email, password, pimage } = req.body
 
 
     //Here checking All the fields at a time
     if(
-        [username, phoneno, email, password, pimage].some((field) => field?.trim() === "")
+        [username, phone, email, password, pimage].some((field) => field?.trim() === "")
     ){
         throw new ApiError (400, "All fields are required")
     }
@@ -29,7 +29,7 @@ const signUpUser = asyncHandler(async(req, res) => {
     // Create User Object - Create entry in db
     const user = await User.create({
         username,
-        phoneno,
+        phone,
         email,
         password,
         pimage
