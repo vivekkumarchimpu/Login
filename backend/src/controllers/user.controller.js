@@ -1,6 +1,7 @@
 import { asyncHandler } from "../utils/asyncHandler.js"
 import {ApiError} from "../utils/ApiError.js"
 import {ApiResponse} from "../utils/ApiResponse.js"
+import { uploadOnCloudinay } from "../utils/cloudinary.js"
 
 import {User} from "../models/user.models.js"
 
@@ -26,13 +27,29 @@ const signUpUser = asyncHandler(async(req, res) => {
     if(existedUser) {
         throw new ApiError(409, "User with email or username already exists ")
     }
+
+    //console.log(req.files);
+
+    
+    const avatarLocalPath = req.files?.pimage[0]?.path;
+    
+    if(!avatarLocalPath) {
+        throw new ApiError(400, "Avatar file is required")
+    }
+
+    const avatar = await uploadOnCloudinay(avatarLocalPath)
+
+    if(!avatar) {
+        throw new ApiError(400, "Avatar file is required !")
+    }
+
     // Create User Object - Create entry in db
     const user = await User.create({
         username,
         phone,
         email,
         password,
-        pimage
+        pimage: avatar.url,
     })
     const createUser = await User.findById(user._id).select("-password")
     if(!createUser){
