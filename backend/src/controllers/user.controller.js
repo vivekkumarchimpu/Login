@@ -43,6 +43,7 @@ const signUpUser = asyncHandler(async(req, res) => {
         throw new ApiError(400, "Avatar file is required !")
     }
 
+    
     // Create User Object - Create entry in db
     const user = await User.create({
         username,

@@ -22,7 +22,7 @@ const Header = () => {
                                 <Link to='/contactus' className='px-2 link1'>ContactUs</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link to='/registration' className='px-2 link1'>Registration</Link>
+                                <Link to='/users/registration' className='px-2 link1'>Registration</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
