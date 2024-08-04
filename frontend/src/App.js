@@ -11,14 +11,16 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 import ContactUs from './pages/ContactUs.js';
 import Registration from './pages/Registration.js';
+import Login from './pages/Login.js';
 
-
+import UniverseVar from './UniverseVar.js';
 
 function App() {
   return (
     <>
       <div className="container">
         <BrowserRouter>
+        <UniverseVar>
         <div className="row">
             <Header />
         </div>
@@ -32,6 +34,7 @@ function App() {
               <Route path='/about' element={<About />} />
               <Route path='/contactus' element={<ContactUs />} />
               <Route path='/users/registration' element={<Registration />} />
+              <Route path='/users/login' element={<Login />} />
             </Routes>
             
           </div>
@@ -39,6 +42,7 @@ function App() {
         <div className='footer'>
 
         </div>
+        </UniverseVar>
         </BrowserRouter>
       </div>
       
